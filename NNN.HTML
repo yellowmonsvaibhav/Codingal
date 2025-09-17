@@ -1,27 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personal Details Form</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #87CEEB, #6495ED);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 350px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4169E1;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #6495ED;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4169E1;
+        }
+
+        h3 {
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
-<style>
-    body {
 
-        background: linear-gradient(to right, #87CEEB, #6495ED);
-        align-items: center;
-    }
-</style>
 <body>
-   
-    <H1>Personal Details and form </H1>
-    <label>Welcome here and just fill your details</label> <br>
-    <input type="text" placeholder="Enter your name"> <br>
-    <input type="text" placeholder="Enter your age"> <br>
-    <input type="'radio" name="hi ">
-    <button>Submit</button><br><hr>
-    <a href="https://www.google.com">Google</a><br>
-    
+    <div>
+        <h3>Just try submitting without filling all details → it won’t work ✅</h3>
+        <div class="form-container">
+            <h1>Personal Details</h1>
 
+            <!-- Form goes to result.html -->
+            <form action="result.html" method="get" target="_blank">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="number" name="age" placeholder="Enter your age" required>
+
+                <label>Are you happy?</label>
+                <div class="radio-group">
+                    <input type="radio" name="mood" value="Yes" required> Yes
+                    <input type="radio" name="mood" value="No"> No
+                </div>
+
+                <!-- Quiz Section -->
+                <label>Solve this quiz before submit:</label>
+                <input type="number" name="quiz1" placeholder="What is 5 + 3?" min="8" max="8" required>
+                <input type="number" name="quiz2" placeholder="What is 10 - 6?" min="4" max="4" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

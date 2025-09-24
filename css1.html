@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About India</title>
+  <title>About India | Culture, History, and Innovation</title>
+  <meta name="description" content="Explore India's rich history, diverse culture, and modern innovation in this detailed overview. Learn more about the world's largest democracy.">
   <style>
+    
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #fff;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
       background-size: 400% 400%;
-     animation: gradientBG 12s ease infinite ;
+      animation: gradientBG 12s ease infinite;
     }
     
     .container {
@@ -37,7 +51,7 @@
       padding: 30px;
       border-radius: 12px;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 20px; /* Added bottom margin */
     }
 
     .btn {
@@ -61,37 +75,42 @@
 
     .btn:active {
       transform: scale(0.97);
-    }
+      background: linear-gradient(45deg, #dd2476, #ff512f); }
     
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>About India</h1>
-    <p>
-      India, the world’s largest democracy, is a land of incredible diversity. With over a billion people, 
-      it is home to hundreds of languages, religions, and traditions. India’s history spans thousands of years, 
-      from the Indus Valley Civilization to the modern era. It has given the world yoga, Ayurveda, classical music, 
-      and breathtaking monuments such as the Taj Mahal.  
-      <br><br>
-      The nation is also a hub of technology, space exploration, and innovation while remaining deeply rooted 
-      in its cultural heritage. From the Himalayas in the north to the Indian Ocean in the south, 
-      India’s geography is as varied as its people.
-    </p>
-
-    <div class="info-box">
-      <h2>Know More About India</h2>
+    <main>
+      <h1>About India</h1>
       <p>
-        Explore more about India’s history, culture, geography, and economy 
-        on its official Wikipedia page.
+        India, the world’s largest democracy, is a land of incredible diversity. With over a billion people, 
+        it is home to hundreds of languages, religions, and traditions. India’s history spans thousands of years, 
+        from the Indus Valley Civilization to the modern era. It has given the world yoga, Ayurveda, classical music, 
+        and breathtaking monuments such as the Taj Mahal.  
+        <br><br>
+        The nation is also a hub of technology, space exploration, and innovation while remaining deeply rooted 
+        in its cultural heritage. From the Himalayas in the north to the Indian Ocean in the south, 
+        India’s geography is as varied as its people.
       </p>
-      <a href="https://en.wikipedia.org/wiki/India" target="_blank" class="btn">Learn More</a>
-    </div>
-  <footer>
-  © 2025 Vaibhav Gupta&trade;. All rights reserved.
-</footer>
 
-  
-    
+      <div class="info-box">
+        <h2>Know More About India</h2>
+        <p>
+          Explore more about India’s history, culture, geography, and economy 
+          on its official Wikipedia page.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/India" target="_blank" class="btn">Learn More</a>
+      </div>
+    </main>
+  </div>
+  <h2> just see it for 1 min and notice</h2>
+      
+
+  <footer>
+    <div class="container">
+      © 2025 Vaibhav Gupta™. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>

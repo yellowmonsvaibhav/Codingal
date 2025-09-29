@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.vaibhav-name {
+  font-family: 'Playfair Display', serif;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  color: #007bff;
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.logo span:last-child {
+  color: #007bff;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+
+.navbar a i {
+  margin-right: 5px;
+}
+
+.navbar a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.btn.talk-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.btn.talk-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.hero {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #e9f0fb;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.about {
+  padding: 60px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #444;
+}
+
+.container {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+a{
+  color: #007bff;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, transform 0.3s ease;}
+
+
+.footer-content {
+  text-align: center;
+  color: #666;
+}
+.footer-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn.talk-btn {
+    margin-top: 10px;
+    align-self: center;
+  }
+}

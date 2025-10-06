@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated CSS Box Model</title>
+    <link rel="stylesheet" href="boxclass.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <h1>CSS Box Model Explained</h1>
+
+        <div class="box-model">
+            <div class="margin">
+                <div class="border">
+                    <div class="padding">
+                        <div class="content">
+                            Content Area
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h2>Box Model Layers</h2>
+            <ul>
+                <li><span class="legend-color content-color"></span> Content</li>
+                <li><span class="legend-color padding-color"></span> Padding</li>
+                <li><span class="legend-color border-color"></span> Border</li>
+                <li><span class="legend-color margin-color"></span> Margin</li>
+            </ul>
+        </div>
+    </div>
+    <section class="box-model-info">
+        <h2>Components of the CSS box model</h2>
+        <ul>
+            <li><strong>Content</strong>: The innermost area where an element's actual content resides (text, images, media). Its dimensions are controlled by the width and height CSS properties.</li>
+            <li><strong>Padding</strong>: Transparent space that surrounds the content and sits inside the border. It creates visual space between the content and the element's edge.</li>
+            <li><strong>Border</strong>: The line between padding and margin that provides a visual boundary. Its style, width, and color are customizable.</li>
+            <li><strong>Margin</strong>: The outer transparent space outside the border that creates a buffer between this element and adjacent elements.</li>
+        </ul>
+
+        <h2>Standard vs. alternative box models</h2>
+        <p>There are two box models that determine how an element's total size is calculated when padding and borders are applied:</p>
+        <ul>
+            <li><strong>Standard box model (content-box)</strong>: The default. Width and height apply only to the content area; padding and border are added on top, increasing the element's final size.</li>
+            <li><strong>Alternative box model (border-box)</strong>: With <code>box-sizing: border-box</code>, width and height include content, padding, and border. The final size stays consistent while the content area shrinks to accommodate padding/border.</li>
+        </ul>
+
+        <h2>Why the box model is important</h2>
+        <p>Understanding the box model helps you:</p>
+        <ul>
+            <li>Control spacing between elements.</li>
+            <li>Avoid unexpected element size changes that can break layouts, especially in responsive design.</li>
+            <li>Use browser developer tools to inspect and debug element dimensions.</li>
+        </ul>
+    </section>
+</body>
+</html>

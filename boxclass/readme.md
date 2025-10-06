@@ -7,6 +7,35 @@ Every box consists of four parts: content, padding, borders and margins.
 
 The image below illustrates the CSS box model:
 
+
+<img src="Screenshot 2025-10-06 at 8.30.31 PM.png" alt="Screenshot of my project" width="500"/>
+
+
+<svg width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .background {
+          background-image: url(' css box model_2.webp ');
+          background-size: cover;
+          color: white; /* Optional: Adjust text color for contrast */
+          padding: 20px;
+          text-align: center;
+          height: 100%;
+        }
+      </style>
+      <div class="background">
+        <h1>Your README Title Here</h1>
+        <p>Your custom text content here.</p>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
+
+
+
+
+
 Explanation of the different parts (from innermost part to outermost part):
 
 Content - The content of the box, where text and images appear

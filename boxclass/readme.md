@@ -31,6 +31,8 @@ The image below illustrates the CSS box model:
     </div>
   </foreignObject>
 </svg>
+<img src="css box model_2.webp" alt="Custom background" />
+
 
 
 

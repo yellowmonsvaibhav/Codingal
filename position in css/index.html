@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding CSS Positioning</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Understanding CSS Positioning</h1>
+            <p class="subtitle">How the different position values affect element layout and flow.</p>
+        </header>
+
+        <section class="card">
+           <h2>Relative</h2>
+            <div class="demo-row">
+                <div class="relative demo-box">
+                    Relative parent
+                    <div class="absolute demo-box absolute-child">Absolute (inside relative)</div>
+                </div>
+                <p class="desc">position: relative; keeps the element in normal flow but allows offsetting its box. It also creates the containing block for absolutely positioned descendants.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Absolute</h2>
+            <div class="demo-row">
+                <div class="example-wrap">
+                    <div class="absolute-alone demo-box">Absolute (viewport or nearest positioned ancestor)</div>
+                </div>
+                <p class="desc">position: absolute; removes the element from normal flow and positions it relative to the nearest positioned ancestor (or the initial containing block).</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Static</h2>
+            <div class="demo-row">
+                <div class="static demo-box">Static (normal flow)</div>
+                <p class="desc">position: static; the default. Elements are laid out in the normal document flow and ignore top/right/bottom/left offsets.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Sticky</h2>
+            <div class="demo-row">
+                <div style="height:320px"></div>
+                <div class="sticky demo-box">Sticky (sticks to top when you scroll)</div>
+                <p class="desc">position: sticky; behaves like static until the element crosses a threshold (top) then it becomes fixed within its nearest scroll container.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="fixed demo-box">Fixed (fixed to viewport)</div>
+
+    
+</body>
+</html>

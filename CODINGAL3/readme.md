@@ -15,9 +15,11 @@ A big shout-out and gratitude to **Sir Aditya Srivastava**, whose guidance, pati
 
 Below are some visual cues (or placeholders) representing the core technologies I work with:
 
-| Technology | Description | Image / Placeholder |
+![HTML img](vgy.webp)
+
+
 |------------|-------------|----------------------|
-| **HTML** | The structure: building blocks of web pages | *(see image above)* |
+| **HTML** | The structure: building blocks of web pages | |
 | **CSS** | Styling and design: how it looks | *(see image above)* |
 | **JavaScript** | Interaction, logic, dynamics | *(see image above)* |
 
@@ -41,5 +43,16 @@ You’ll often see them working together in my projects — seamlessly.
 
 ---
 
-## 🗂️ Project Structure (Typical)
+
+
+## 📬 Contact & Connect
+
+- ✉️ Email: vaibhavgupa20514@gmail.com.com  
+
+
+---
+
+Thank you for visiting — I hope what you see here inspires you, and maybe even sparks a collaboration or conversation!  
+
+
 

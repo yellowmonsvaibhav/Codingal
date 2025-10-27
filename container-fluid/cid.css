@@ -1,0 +1,38 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') center center/cover no-repeat;
+  height: 80vh;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+navbar-brand {
+  font-size: 1.5rem;
+}
+navbar-brand:hover {
+  color: #ffc107;
+  text-decoration: none;
+}

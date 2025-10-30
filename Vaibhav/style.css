@@ -1,0 +1,110 @@
+/* === Base Styles === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  padding-top: 70px; /* space for navbar */
+}
+
+/* === Hero === */
+.hero {
+  background: linear-gradient(135deg, #004aad, #5de0e6);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 10px auto 0;
+}
+
+/* === Section Headings === */
+h2 {
+  color: #004aad;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* === Timeline === */
+.timeline {
+  border-left: 4px solid #004aad;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "●";
+  color: #004aad;
+  font-size: 20px;
+  position: absolute;
+  left: -12px;
+  top: 0;
+}
+
+/* === AI Cards === */
+.ai-card {
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* === Brand Cards === */
+.brand-card {
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.brand-card img {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+/* === Footer === */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.carousel-item .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.carousel-item .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fa61ff;
+  border-radius: 50%;
+  padding: 10px;
+}

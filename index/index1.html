@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store (Bootstrap Only)</title>
+    
+    <!-- 1. Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjM+ALEwIH" crossorigin="anonymous">
+    
+    <!-- 2. Font Awesome for Icons (simple alternative to custom SVGs) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ4mJ2VqH69kP2i/E1k1M7FvV7R3R0GzH4p+i4T3K6/4P0uE+U2w7x5N3q5P0uFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 3. Simple Custom CSS (Recreating the look without Tailwind) -->
+    <style>
+        /* Define custom color variables for easy use */
+        :root {
+            --brand-primary: #3B82F6; /* Blue-600 */
+            --brand-secondary: #10B981; /* Emerald-500 */
+            --brand-light: #F3F4F6; /* Gray-100 */
+            --brand-dark: #1F2937; /* Gray-800 */
+            --bg-color: #f9fafb; /* Gray-50 */
+        }
+
+        /* Use a clean font like Inter (fallback to system sans-serif) */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-weight: 700 !important;
+            color: var(--brand-dark) !important;
+            transition: color 0.2s;
+        }
+
+        .text-brand-primary {
+            color: var(--brand-primary);
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            background-color: var(--brand-light);
+            border-radius: 1rem; /* Rounded-xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 1.5rem;
+        }
+        
+        /* Primary Button Style */
+        .btn-primary-custom {
+            background-color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* Rounded-full */
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary-custom:hover {
+            background-color: #2563EB; /* Darker blue */
+            border-color: #2563EB;
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Secondary Button Style (Add to Cart) */
+        .btn-secondary-custom {
+            background-color: var(--brand-secondary);
+            border-color: var(--brand-secondary);
+            color: white;
+            font-weight: 500;
+            border-radius: 0.5rem; /* Rounded-lg */
+            transition: background-color 0.2s;
+        }
+        .btn-secondary-custom:hover {
+            background-color: #059669; /* Darker emerald */
+            border-color: #059669;
+            color: white;
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            background-color: white;
+            border-radius: 0.75rem; /* Rounded-xl */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow-md */
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+            height: 100%; /* Ensure all cards are the same height */
+            border: 1px solid #e5e7eb;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Shadow-lg */
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+        .cart-badge {
+            background-color: var(--brand-secondary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 1.25rem;
+            height: 1.25rem;
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Utility overrides to match modern look */
+        .nav-link.active {
+            color: var(--brand-primary) !important;
+            font-weight: 600;
+        }
+        .nav-link:not(.active):hover {
+            color: var(--brand-primary) !important;
+        }
+        
+    </style>
+</head>
+<body class="pb-5">
+    <!-- Bootstrap JavaScript (required for Navbar collapse) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top py-3">
+        <div class="container-fluid container-lg">
+            <a class="navbar-brand fs-4" href="#">
+                E-Comm <span class="text-brand-primary">Store</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-lg-4"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                    <li class="nav-item me-lg-4"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item me-lg-4"><a class="nav-link" href="#">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <!-- Search Icon -->
+                    <button class="btn text-secondary me-3" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <!-- User Icon -->
+                    <button class="btn text-secondary me-3" aria-label="Profile">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <!-- Cart Icon with Counter -->
+                    <div class="position-relative">
+                        <button class="btn text-secondary" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <!-- Cart Count - using the custom class -->
+                        <span class="cart-badge">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section py-5 my-4 mx-2 mx-md-4">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-brand-dark mb-4">
+                New Arrivals <span class="text-brand-primary">Just Dropped</span>
+            </h1>
+            <p class="lead text-secondary mb-5 mx-auto" style="max-width: 600px;">
+                Discover our curated collection of the season's best sellers and limited-edition items.
+            </p>
+            <a href="#" class="btn btn-lg btn-primary-custom">
+                Shop Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Product Grid Section -->
+    <main class="container py-4">
+        <h2 class="fs-3 fw-bold text-dark mb-5 text-center text-md-start">Featured Products</h2>
+        
+        <div class="row g-4" id="product-grid">
+            
+            <!-- Product Card 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <img src="https://placehold.co/400x400/3B82F6/FFFFFF?text=Headset" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x400/3B82F6/FFFFFF?text=Product+A';"
+                         class="product-image" alt="Modern Wireless Headset">
+                    <div class="text-center w-100">
+                        <h3 class="fs-5 fw-semibold text-truncate mb-1">Modern Wireless Headset</h3>
+                        <p class="text-muted small mb-2">Electronics</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                             <span class="fs-4 fw-bold text-brand-primary me-2">$89.99</span>
+                             <span class="text-muted small text-decoration-line-through">$129.99</span>
+                        </div>
+                        <button class="btn btn-secondary-custom w-100">
+                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <img src="https://placehold.co/400x400/10B981/FFFFFF?text=Coffee+Maker" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x400/10B981/FFFFFF?text=Coffee+Maker';"
+                         class="product-image" alt="Espresso Coffee Maker">
+                    <div class="text-center w-100">
+                        <h3 class="fs-5 fw-semibold text-truncate mb-1">Espresso Coffee Maker</h3>
+                        <p class="text-muted small mb-2">Home Goods</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                             <span class="fs-4 fw-bold text-brand-primary me-2">$249.00</span>
+                             <span class="text-muted small text-decoration-line-through">$300.00</span>
+                        </div>
+                        <button class="btn btn-secondary-custom w-100">
+                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Card 3 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <img src="https://placehold.co/400x400/F97316/FFFFFF?text=Leather+Wallet" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x400/F97316/FFFFFF?text=Leather+Wallet';"
+                         class="product-image" alt="Premium Leather Wallet">
+                    <div class="text-center w-100">
+                        <h3 class="fs-5 fw-semibold text-truncate mb-1">Premium Leather Wallet</h3>
+                        <p class="text-muted small mb-2">Accessories</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                             <span class="fs-4 fw-bold text-brand-primary me-2">$45.50</span>
+                             <span class="text-muted small text-decoration-line-through">$60.00</span>
+                        </div>
+                        <button class="btn btn-secondary-custom w-100">
+                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Card 4 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card">
+                    <img src="https://placehold.co/400x400/EF4444/FFFFFF?text=Sneakers" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/400x400/EF4444/FFFFFF?text=Sneakers';"
+                         class="product-image" alt="High-Top Running Sneakers">
+                    <div class="text-center w-100">
+                        <h3 class="fs-5 fw-semibold text-truncate mb-1">High-Top Running Sneakers</h3>
+                        <p class="text-muted small mb-2">Apparel</p>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                             <span class="fs-4 fw-bold text-brand-primary me-2">$110.00</span>
+                             <span class="text-muted small text-decoration-line-through">$140.00</span>
+                        </div>
+                        <button class="btn btn-secondary-custom w-100">
+                            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Simple Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p class="mb-0 small">&copy; 2024 E-Comm Store. All rights reserved. | Simple Bootstrap UI Demo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

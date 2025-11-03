@@ -1,0 +1,64 @@
+body {
+  background-color: #0e0e10;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+/* Navbar */
+.navbar .nav-link {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: url('https://cdn2.unrealengine.com/fortnite-og-metaimage-1920x1080-2c6c5b1b0b0b.jpg') center center/cover no-repeat;
+  height: 85vh;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Game cards */
+.game-card img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Sale Banner */
+.sale-banner {
+  background: linear-gradient(90deg, #111, #1c1c1c);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    background-position: top center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

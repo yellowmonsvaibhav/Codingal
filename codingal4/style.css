@@ -1,0 +1,113 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+#spinner {
+  transition: opacity 0.5s ease;
+}
+
+#spinner.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+#main-content.show {
+  opacity: 1;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar-brand img {
+  height: 40px;
+}
+.navbar-brand:hover {
+  text-decoration: none;
+}
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+.navbar {
+  padding: 1rem 2rem;
+}
+.navbar .nav-link {
+  font-weight: 500;
+  margin-right: 1rem;
+}
+#spinner.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#main-content.show {
+  opacity: 1;
+}
+#spinner.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#main-content.show {
+  opacity: 1;
+}
+
+section {
+  scroll-margin-top: 70px; /* prevents content from hiding under navbar */
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+a{
+    text-decoration: underline;
+    color: inherit;
+}

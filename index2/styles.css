@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+     background: url('https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg ') no-repeat center center/cover;
+}
+.navbar {
+    background-color: #222;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.nav-link {
+    color: #fff !important;
+    margin-right: 1rem;
+}
+.nav-link:hover {
+    color: #f0a500 !important;
+}
+.section {
+    padding: 60px 0;
+}
+
+#projects {
+    background: url('https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg') no-repeat center center/cover;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
+}
+
+img.img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer a {
+    color: #f0a500;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;

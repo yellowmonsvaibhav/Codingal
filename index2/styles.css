@@ -7,7 +7,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
-     background: url('https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg ') no-repeat center center/cover;
+     background: url('bg.avif';
 }
 .navbar {
     background-color: #222;
@@ -28,7 +28,7 @@ body {
 }
 
 #projects {
-    background: url('https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg') no-repeat center center/cover;
+    background: url('bg.avif') no-repeat center center/cover;
 }
 
 .glass-card {
